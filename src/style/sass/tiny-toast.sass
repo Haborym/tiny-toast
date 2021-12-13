@@ -1,0 +1,232 @@
+/*
+ *  Colors
+ */
+
+$background-color: #333
+
+$info-color: #132AF6
+$info-color-second: #2c40f7
+
+$success-color: #1C6615
+$success-color-second: #227B19
+
+$warning-color: #e38d13
+$warning-color-second: #ed9923
+
+$error-color: #931010
+$error-color-second: #AA1313
+
+$font-color: #fff
+
+
+.tiny-toast
+    visibility: hidden
+    max-width: 50px
+    height: fit-content
+    margin-top: 100px
+    background-color: $background-color
+    color: $font-color
+    text-align: justify
+    position: fixed
+    z-index: 1
+    top: 0
+    right: 0
+    bottom: 30px
+    font-size: 17px
+    white-space: nowrap
+    display: flex !important
+
+
+.tiny-toast
+    .tiny-toast-show
+        visibility: visible
+        -webkit-animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s
+        animation: fadein 0.5s, expand 0.5s 0.5s, stay 3s 1s
+        animation-fill-mode: forwards
+    .tiny-toast-stay
+        visibility: visible
+        -webkit-animation: fadein 0.5s, expand 0.5s 0.5s
+        animation: fadein 0.5s, expand 0.5s 0.5s
+        animation-fill-mode: forwards
+    .toast-hide
+        visibility: visible
+        max-height: 50px
+        -webkit-animation: shrink 0.5s, fadeout 0.75s 1.5s
+        animation: shrink 0.5s, fadeout 0.75s 1.5s
+        animation-fill-mode: forwards
+
+
+.tiny-toast-img
+    width: 50px
+    height: initial
+    float: left
+    padding-top: 16px
+    padding-bottom: 16px
+    padding-left: 17px
+    box-sizing: border-box
+    color: $font-color
+
+
+.tiny-toast-desc
+    color: $font-color
+    padding: 16px
+    white-space: pre-line
+    max-width: 275px !important
+    cursor: default
+
+    .hide-content
+        -webkit-animation: fadeout 0.5s
+        animation: fadeout 0.5s
+        animation-fill-mode: forwards
+
+
+.tiny-toast-icon
+    .tiny-toast-animated
+        -webkit-animation: 1s spring 1s
+        animation: 1s spring 1s
+        animation-iteration-count: 2
+
+
+/*
+ *  Toast type : info
+ */
+.toast-img-info 
+    background-color: $info-color !important
+.toast-info 
+    background-color: $info-color-second !important
+
+/*
+ *  Toast type : success
+ */
+.toast-img-success 
+    background-color: $success-color !important
+.toast-success 
+    background-color: $success-color-second !important
+
+/*
+ *  Toast type : warning
+ */
+.toast-img-warning 
+    background-color: $warning-color !important
+.toast-warning 
+    background-color: $warning-color-second !important
+
+/*
+ *  Toast type : error
+ */
+.toast-img-error 
+    background-color: $error-color !important
+.toast-error 
+    background-color: $error-color-second !important
+
+
+/*
+ * Toast Dismissible button
+ */
+.toast-close-btn 
+    font-weight: bold
+    color: $font-color
+    position: absolute
+    top: 0
+    right: 0
+    margin-top: 7px
+    margin-right: 10px
+
+.toast-close-btn:hover 
+    cursor: pointer
+
+
+/*
+ *  Animations
+ */
+@-webkit-keyframes fadein 
+    from 
+        bottom: 0
+        opacity: 0
+    to 
+        bottom: 100px
+        opacity: 1
+
+@keyframes fadein 
+    from 
+        bottom: 0
+        opacity: 0
+    to 
+        bottom: 100px
+        opacity: 1
+
+
+@-webkit-keyframes expand 
+    from 
+        min-width: 50px
+    to 
+        min-width: 350px
+
+@keyframes expand 
+    from 
+        min-width: 50px
+    to 
+        min-width: 350px
+
+
+@-webkit-keyframes stay 
+    from 
+        min-width: 350px
+    to 
+        min-width: 350px
+
+@keyframes stay 
+    from 
+        min-width: 350px
+    
+    to 
+        min-width: 350px
+    
+
+@-webkit-keyframes shrink 
+    from 
+        min-width: 350px !important
+    to 
+        min-width: 50px
+    
+@keyframes shrink 
+    from 
+        min-width: 350px !important
+    to 
+        min-width: 50px
+
+
+@-webkit-keyframes fadeout 
+    from 
+        bottom: 30px
+        opacity: 1
+    to 
+        bottom: 60px
+        opacity: 0
+
+@keyframes fadeout 
+    from 
+        bottom: 30px
+        opacity: 1
+    to 
+        bottom: 60px
+        opacity: 0
+
+/*
+ * Spring animation
+ */
+@keyframes spring 
+    from 
+        transform: rotate(0turn)
+    10% 
+        transform: rotate(-0.15turn)
+    20% 
+        transform: rotate(0.15turn)
+    30% 
+        transform: rotate(-0.05turn)
+    40% 
+        transform: rotate(0.05turn)
+    50% 
+        transform: rotate(0turn)
+    to 
+        transform: rotate(0turn)
