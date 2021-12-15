@@ -18,12 +18,12 @@ Include in the header of the page both css and js files.
 
 * _Adding the CSS file_
     ```html
-    <link rel="stylesheet" type="text/css" href="PATH/src/css/tiny-toast.css">
+    <link rel="stylesheet" type="text/css" href="PATH/dist/css/tiny-toast.min.css">
     ```
 
 * _Adding the Javascript file_
     ```html
-    <script src="PATH/src/js/tiny-toast.js"></script>
+    <script src="PATH/dist/js/tiny-toast.min.js"></script>
     ```
 
 In order to use it correctly with the icons you have to add a CDN of [Font Awesome](https://fontawesome.com/). Otherwise you won't be able to display icons on the Toast.
